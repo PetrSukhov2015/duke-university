@@ -13,7 +13,11 @@ public class Main3 {
 		ClosestQuakes cq = new ClosestQuakes();
 		//cq.findClosestQuakes();
 		LargestQuakes lq = new LargestQuakes();
-		lq.findLargestQuakes();
+		//lq.findLargestQuakes();
+		EarthQuakeClient2 eqc2 = new EarthQuakeClient2();
+		//eqc2.quakesWithFilter();
+		eqc2.testMatchAllFilter2();
+		//eqc2.quakesWithFilter();
 	}
 
 }

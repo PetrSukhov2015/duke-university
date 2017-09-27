@@ -6,21 +6,24 @@ public class LargestQuakes {
 	public void findLargestQuakes(){
 		EarthQuakeParser parser = new EarthQuakeParser();
         
-		String source = "D:\\duke\\level4\\SearchingEarthquakeDataStarterProgram\\data\\nov20quakedatasmall.atom";
+		String source = "D:\\duke\\level4\\SearchingEarthquakeDataStarterProgram\\data\\nov20quakedata.atom";
         ArrayList<QuakeEntry> list  = parser.read(source);
-        for (QuakeEntry qe: list){
-        	System.out.println(qe);
-        }
+        //for (QuakeEntry qe: list){
+        //	System.out.println(qe);
+        //}
         System.out.println("read data for "+list.size()+" quakes");
         int indLagest = indexOfLargest(list);
         System.out.println("index of lagest: "+indLagest+ 
         		"\ninfo: "+list.get(indLagest));
-        ArrayList<QuakeEntry> topMagList  = getLargest(list,5);
+        ArrayList<QuakeEntry> topMagList  = getLargest(list,50);
         System.out.println("read data for topMagList "+topMagList.size()+" quakes");
-        
+        int i=1;
         for (QuakeEntry qe: topMagList){
+        	System.out.println(i+" ");
         	System.out.println(qe);
+        	i++;
         }
+        System.out.println(topMagList.size());
         
         
 	}
