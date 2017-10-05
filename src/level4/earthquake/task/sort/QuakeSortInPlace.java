@@ -48,7 +48,7 @@ public class QuakeSortInPlace {
     }
     
     public void sortByLargestDepth(ArrayList<QuakeEntry> list){
-    	for (int i=0; i < 71; i++){
+    	for (int i=0; i < 50; i++){
     		int maxInd = getLargestDepth(list,i);
     		QuakeEntry qi = list.get(i);
     		QuakeEntry qmax = list.get(maxInd);
@@ -128,22 +128,22 @@ public class QuakeSortInPlace {
         
         
         //String source = "D:\\duke\\level4\\EarthquakeSortStarterProgram\\data\\earthQuakeDataDec6sample1.atom";
-        String source = "D:\\duke\\level4\\EarthquakeSortStarterProgram\\data\\earthQuakeDataDec6sample1.atom";
+        String source = "D:\\duke\\level4\\EarthquakeSortStarterProgram\\data\\earthQuakeDataWeekDec6sample1.atom";
         
         ArrayList<QuakeEntry> list  = parser.read(source);  
        
         System.out.println("read data for "+list.size()+" quakes");    
         //sortByMagnitude(list);
         //sortByLargestDepth(list);
-        //sortByMagnitudeWithBubbleSort(list);
-        sortByMagnitudeWithCheck(list);
+        sortByMagnitudeWithBubbleSort(list);
+        //sortByMagnitudeWithCheck(list);
         //sortByMagnitudeWithBubbleSortWithCheck(list);
         System.out.println("final");
         int i=0;
-        for (QuakeEntry qe: list) { 
-            System.out.println("num: "+ i + ";" +qe);
-            i++;
-        } 
+        //for (QuakeEntry qe: list) { 
+        //    System.out.println("num: "+ i + ";" +qe);
+        //    i++;
+        //} 
         
     }
     

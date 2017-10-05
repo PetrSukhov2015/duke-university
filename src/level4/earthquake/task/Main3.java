@@ -1,5 +1,7 @@
 package level4.earthquake.task;
 
+import level4.earthquake.task.sort.QuakeSortInPlace;
+
 public class Main3 {
 
 	public static void main(String[] args) {
@@ -16,8 +18,15 @@ public class Main3 {
 		//lq.findLargestQuakes();
 		EarthQuakeClient2 eqc2 = new EarthQuakeClient2();
 		//eqc2.quakesWithFilter();
-		eqc2.testMatchAllFilter2();
+		//eqc2.testMatchAllFilter2();
 		//eqc2.quakesWithFilter();
+		QuakeSortInPlace qsp = new QuakeSortInPlace();
+		//qsp.testSort();
+		//qsp.sortByLargestDepth();
+		DifferentSorters ds = new DifferentSorters();
+		//ds.sortWithCompareTo();
+		//ds.sortByTitleAndDepth();
+		ds.sortByLastWordInTitleThenByMagnitude();
 	}
 
 }
