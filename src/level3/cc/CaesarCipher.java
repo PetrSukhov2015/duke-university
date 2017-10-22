@@ -2,6 +2,9 @@ package level3.cc;
 import edu.duke.*;
 
 public class CaesarCipher {
+	private void theMethod(){
+		
+	}
     public String encrypt(String input, int key) {
         //Make a StringBuilder with message (encrypted)
         StringBuilder encrypted = new StringBuilder(input);

@@ -15,7 +15,7 @@ public class WordLengths {
 		int[] a = new int[60];
 		//Path p = new Path("D:\\duke\\level3\\ProgrammingBreakingCaesarData\\smallHamlet.txt");
 		//FileResource fs = new FileResource("D:\\duke\\level3\\lotsOfWords.txt.");
-		FileResource fs = new FileResource("D:\\duke\\level3\\CommonWords\\data\\romeo.txt.");
+		FileResource fs = new FileResource("D:\\duke\\level3\\QuizCryptographyData\\manywords.txt");
 		
 		a= countWordLengths(fs, a);
 		for (int k1=0; k1<a.length; k1++){
@@ -45,11 +45,15 @@ public class WordLengths {
 		for (String word: words){
 			//if ( ('.' == word.charAt( word.length()-1)) ||
 			//		(',' == word.charAt( word.length()-1 )) ){
+			String tmp="";
+			
+			System.out.println(word);
 			if ( false == Character.isLetter(word.charAt(word.length()-1))){ 
 				word=word.substring(0,word.length()-1).toLowerCase();
-				//System.out.println(word);
+				System.out.println(word);
 			}
 			if ( false == Character.isLetter(word.charAt(0))){ 
+				
 				word=word.substring(1).toLowerCase();
 				//System.out.println(word);
 			}
