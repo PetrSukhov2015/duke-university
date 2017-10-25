@@ -4,8 +4,12 @@ public class WordPlay {
 	public static void main (String[] args){
 		//System.out.print(replaceVowels("Hello World",'*'));
 		//System.out.println(emphasize("dna ctgaaactga", 'a'));
-		CaesarCipher cc = new CaesarCipher();
-		cc.testCaesar();
+		//CaesarCipher cc = new CaesarCipher();
+		//cc.testCaesar();
+		//WordFrequencies wf = new WordFrequencies();
+		//wf.tester();
+		CharactersInPlay cp = new CharactersInPlay();
+		cp.tester();//.findAllCharacters();
 	}
 	public static boolean isVowel(char ch){
 		return "AEIOUaeiou".indexOf(ch) != -1;
