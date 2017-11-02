@@ -17,11 +17,20 @@ public class Tester{
 	}
     private static void testUniqueIP() {
     	LogAnalyzer la = new LogAnalyzer();
-        la.readFile("D://duke//level3//_webLog//WebLogProgram//weblog1_log");
+        la.readFile("D://duke//level3//_webLog//WebLogProgram//weblog2_log");
         //
-        la.countUniqueIPsInRange(300,399);
-        //la.uniqueIPVisitsOnDay("Mar 17");
-		la.countUniqueIPs();
+       
+        //System.out.println(la.mostNumberVisitsByIP( la.countVisitsPerIP() ));
+        //ArrayList <String> activeIP = la.iPsMostVisits(la.countVisitsPerIP() );
+        //for (String l: activeIP){        	System.out.println(l);}
+        //System.out.println(la.dayWithMostIPVisits(la.iPsForDays()) );
+        ArrayList <String> activeIPs = la.iPsWithMostVisitsOnDay(la.iPsForDays(),"Sep 30");
+        for (String l: activeIPs){        	System.out.println(l);        }
+        
+    	//la.countUniqueIPsInRange(200,299);
+        //la.countUniqueIPs();
+        //la.uniqueIPVisitsOnDay("Sep 27");
+		
 	}
 	public static void testLogEntry() {
         LogEntry le = new LogEntry("1.2.3.4", new Date(), "example request", 200, 500);
