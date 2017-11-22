@@ -15,17 +15,17 @@ import level5.interfaces.Rating;
 
 public class SecondRatings {
     private ArrayList<Movie> myMovies;
-    private ArrayList<PlainRater> myRaters;
+    private ArrayList<Rater> myRaters;
     public ArrayList<Movie> getMyMovies() {
 		return myMovies;
 	}
 	public void setMyMovies(ArrayList<Movie> myMovies) {
 		this.myMovies = myMovies;
 	}
-	public ArrayList<PlainRater> getMyRaters() {
+	public ArrayList<Rater> getMyRaters() {
 		return myRaters;
 	}
-	public void setMyRaters(ArrayList<PlainRater> myRaters) {
+	public void setMyRaters(ArrayList<Rater> myRaters) {
 		this.myRaters = myRaters;
 	}
 	public static void main(String[] args){
@@ -46,7 +46,7 @@ public class SecondRatings {
 		// TODO Auto-generated constructor stub
 		FirstRatings fr = new FirstRatings();
 		myMovies = fr.loadMovies(moviefile);
-		//myRaters = fr.loadRaters(ratingsfile);
+		myRaters = fr.loadRaters(ratingsfile);
 		
 	}
 	public static int theNum=0;
@@ -54,7 +54,7 @@ public class SecondRatings {
 		// TODO Auto-generated method stub
 		double avg=0.0;
 		int num=0;
-		for (PlainRater r: myRaters){
+		for (Rater r: myRaters){
 			if (r.hasRating(id) &&
 					rat<=r.getRating(id)		){
 				avg+=r.getRating(id);
@@ -81,7 +81,7 @@ public class SecondRatings {
 		//HashMap<String, ArrayList<Double>> mapID = new HashMap<String, ArrayList<Double>>(); 
 		ArrayList<String> ids = new ArrayList<String>();
 		
-		for (PlainRater rater:myRaters){
+		for (Rater rater:myRaters){
 			
 			//ArrayList<Rating> ratList1 = rater.getMyRatings();
 			for (Rating r: rater.getMyRatings()){

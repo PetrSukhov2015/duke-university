@@ -33,17 +33,17 @@ public class FirstRatings {
 
 	}
 	private static void testLoadRaters() {
-		ArrayList<PlainRater> ratList = loadRaters("D:\\duke\\level5\\StepOneStarterProgram\\data\\ratings.csv");
+		ArrayList<Rater> ratList = loadRaters("D:\\duke\\level5\\StepOneStarterProgram\\data\\ratings.csv");
 		//System.out.println(findParRate(ratList,2));
 		//System.out.println(findMaxRat(ratList));
 		//System.out.println(ratList.size());
 		System.out.println(unicMovies(ratList));
 		
 	}
-	private static int unicMovies(ArrayList<PlainRater> ratList) {
+	private static int unicMovies(ArrayList<Rater> ratList) {
 		// TODO Auto-generated method stub
 		int res=0;
-		for (PlainRater rat: ratList){
+		for (Rater rat: ratList){
 			//for (Rating r:rat.getItemsRated()){
 				
 			{}
@@ -65,9 +65,9 @@ public class FirstRatings {
 		
 		return res;
 	}
-	private static int findParRate(ArrayList<PlainRater> ratList,int id) {
+	private static int findParRate(ArrayList<Rater> ratList,int id) {
 		int res=0;
-		for (PlainRater r: ratList){
+		for (Rater r: ratList){
 			if (id == Integer.parseInt(r.getID())){
 				res= r.numRatings();
 			}
@@ -75,8 +75,8 @@ public class FirstRatings {
 		return res;
 		
 	}
-	public static ArrayList<PlainRater> loadRaters(String filename) {
-		ArrayList<PlainRater> ratList = new ArrayList<PlainRater>();
+	public static ArrayList<Rater> loadRaters(String filename) {
+		ArrayList<Rater> ratList = new ArrayList<Rater>();
 		FileResource fr = new FileResource(filename);		
 		CSVParser parser = fr.getCSVParser(true);
 		ArrayList<String> listOfId = new ArrayList<String>();
@@ -84,7 +84,7 @@ public class FirstRatings {
 		
 		for (CSVRecord csvRecord : parser) {
 			if (listOfId.contains(csvRecord.get(0)) ){
-				for (PlainRater rater: ratList){
+				for (Rater rater: ratList){
 					//System.out.println(rater.getID());
 					if (rater.getID().equals(csvRecord.get(0)) ){
 						
@@ -94,7 +94,7 @@ public class FirstRatings {
 				}
 			}else{
 				listOfId.add(csvRecord.get(0));
-				PlainRater r = new PlainRater(csvRecord.get(0));
+				Rater r = new PlainRater(csvRecord.get(0));
 				r.addRating(csvRecord.get(1),
 						Double.parseDouble(csvRecord.get(2)) );
 				ratList.add(r);
