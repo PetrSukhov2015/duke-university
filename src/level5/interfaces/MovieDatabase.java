@@ -17,7 +17,8 @@ public class MovieDatabase {
     private static void initialize() {
         if (ourMovies == null) {
             ourMovies = new HashMap<String,Movie>();
-            loadMovies("data/ratedmoviesfull.csv");
+            loadMovies("D:\\duke\\level5\\StepOneStarterProgram\\data\\ratedmoviesfull3.csv");
+            		//"data/ratedmoviesfull.csv");
         }
     }	
 

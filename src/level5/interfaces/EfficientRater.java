@@ -14,7 +14,7 @@ public class EfficientRater implements Rater{
     private HashMap<String,Rating> myRatings;
     //private ArrayList<Rating> myRatings;
 
-    public HashMap<String,Rating> getMyRatings() {
+    public ArrayList<Rating> getMyRatings() {
 		return myRatings;
 	}
 
