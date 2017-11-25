@@ -13,6 +13,7 @@ public class MinutesFilter implements Filter {
 		if (minM <=curM &&
 				curM <= maxM){
 			return true;
+			
 		}
 		return false;
 	}
