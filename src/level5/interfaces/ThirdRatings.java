@@ -25,18 +25,10 @@ public class ThirdRatings {
 		}
 		//getAverageRatingsByFilter(35,new TrueFilter());
 		//printAverageRatingsByYear (20,2000);
-		//printAverageRatingsByMinutes (5,105,135);
+		
 		
     }
 
-	private static void printAverageRatingsByMinutes(int r, int min, int max) {
-    	ArrayList<Rating> fList= getAverageRatingsByFilter ( r,new MinutesFilter(min, max) );
-		System.out.println("found "+fList.size()+" movies");
-		for (Rating rat: fList){
-			System.out.print(getTitle(rat.getItem())+" "+rat.getValue() +" "+MovieDatabase.getMinutes(rat.getItem())+" minuts \n");
-		}
-		
-	}
 
 	public ThirdRatings() {
         this("D:\\duke\\level5\\StepOneStarterProgram\\data\\ratings.csv");
