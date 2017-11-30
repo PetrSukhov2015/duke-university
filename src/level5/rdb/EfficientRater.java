@@ -67,5 +67,11 @@ public class EfficientRater implements Rater{
         return list;
     }
 
+	@Override
+	public ArrayList<Rating> getMyRatings2() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

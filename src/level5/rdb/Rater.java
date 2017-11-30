@@ -11,5 +11,5 @@ public interface Rater {
 	public int numRatings();
 	public ArrayList<String> getItemsRated();
 	public HashMap<String, Rating> getMyRatings();
-	
+	public ArrayList<Rating> getMyRatings2();
 }

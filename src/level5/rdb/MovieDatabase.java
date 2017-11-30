@@ -3,14 +3,20 @@ package level5.rdb;
 import java.util.*;
 import org.apache.commons.csv.*;
 import edu.duke.FileResource;
-
+import level5.rdb.FirstRatings;
+import level5.rdb.Movie;
 public class MovieDatabase {
     private static HashMap<String, Movie> ourMovies;
+    private static ArrayList<Movie> list;
+    
+    public static ArrayList<Movie> getMovies(){
+    	return list;
+    }
 
     public static void initialize(String moviefile) {
         if (ourMovies == null) {
             ourMovies = new HashMap<String,Movie>();
-            loadMovies("data/" + moviefile);
+            loadMovies(moviefile);//"data/" + moviefile);
         }
     }
 
@@ -25,7 +31,7 @@ public class MovieDatabase {
 	
     private static void loadMovies(String filename) {
         FirstRatings fr = new FirstRatings();
-        ArrayList<Movie> list = fr.loadMovies(filename);
+        list = fr.loadMovies(filename);
         for (Movie m : list) {
             ourMovies.put(m.getID(), m);
         }

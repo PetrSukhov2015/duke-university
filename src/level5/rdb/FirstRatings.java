@@ -1,8 +1,8 @@
 package level5.rdb;
 
 import edu.duke.*;
-import level5.interfaces.Movie;
-import level5.interfaces.Rater;
+//import level5.interfaces.Movie;
+//import level5.interfaces.Rater;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -94,7 +94,7 @@ public class FirstRatings {
 				}
 			}else{
 				listOfId.add(csvRecord.get(0));
-				Rater r = new PlainRater(csvRecord.get(0));
+				Rater r = null;//new PlainRater(csvRecord.get(0));
 				r.addRating(csvRecord.get(1),
 						Double.parseDouble(csvRecord.get(2)) );
 				ratList.add(r);

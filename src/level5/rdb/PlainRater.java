@@ -8,8 +8,9 @@
 
 package level5.rdb;
 import java.util.*;
+import level5.rdb.Rater;
 
-public class PlainRater implements Rater{
+public class PlainRater implements  Rater{
     private String myID;
     private ArrayList<Rating> myRatings;
 
@@ -66,6 +67,26 @@ public class PlainRater implements Rater{
         
         return list;
     }
+
+	//@Override
+	//public HashMap<String, Rating> getMyRatings2() {
+	//	// TODO Auto-generated method stub
+	//	return null;
+	//}
+
+	@Override
+	public ArrayList<Rating> getMyRatings2() {
+		// TODO Auto-generated method stub
+		return myRatings;
+	}
+
+	@Override
+	public HashMap<String, Rating> getMyRatings() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 
 
 }
