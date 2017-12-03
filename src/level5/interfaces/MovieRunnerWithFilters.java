@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
+//import level5.interfaces.FourthRatings;
+import level5.interfaces.Rating;
+
 public class MovieRunnerWithFilters {
 	public static void main(String[] args){
 		MovieRunnerWithFilters mrf = new MovieRunnerWithFilters();
@@ -11,7 +14,18 @@ public class MovieRunnerWithFilters {
 		//mrf.printAverageRatingsByYear (20,2000);
 		//mrf.printAverageRatingsByDirectors (4,"Clint Eastwood,Joel Coen,Martin Scorsese,Roman Polanski,Nora Ephron,Ridley Scott,Sydney Pollack");
 		//mrf.printAverageRatingsByMinutes (5,105,135);
-		mrf.printAverageRatingsByGenre(20, "Comedy");
+		//mrf.printAverageRatingsByGenre(20, "Comedy");
+		mrf.printSimilarRating();
+	}
+
+	private void printSimilarRating() {
+		ThirdRatings tr = new ThirdRatings ();
+		ArrayList<Rating> ms = tr.getSimilarRating("314", 10, 5);
+		for (Rating r:ms){
+			System.out.println(tr.getTitle(r.getItem())+" "+r.getValue() );
+		}
+		//System.out.println(ms.get(0).getItem());
+		
 	}
 
 	private void printAverageRatingsByGenre(int r, String genre) {

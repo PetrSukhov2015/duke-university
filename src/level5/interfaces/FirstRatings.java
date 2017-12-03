@@ -33,7 +33,7 @@ public class FirstRatings {
 
 	}
 	private static void testLoadRaters() {
-		ArrayList<Rater> ratList = loadRaters("D:\\duke\\level5\\StepOneStarterProgram\\data\\ratings.csv");
+		ArrayList<Rater> ratList = loadRaters("D:\\duke\\level5\\StepOneStarterProgram\\data\\ratings_short.csv");
 		//System.out.println(findParRate(ratList,2));
 		//System.out.println(findMaxRat(ratList));
 		//System.out.println(ratList.size());

@@ -11,28 +11,28 @@ import java.util.*;
 
 public class EfficientRater implements Rater{
     private String myID;
-    private HashMap<String,Rating> myRatings;
-    //private ArrayList<Rating> myRatings;
+    //private HashMap<String,Rating> myRatings;
+    private ArrayList<Rating> myRatings;
 
-    public ArrayList<Rating> getMyRatings() {
-		return myRatings;
-	}
+    //public ArrayList<Rating> getMyRatings() {
+	//	return myRatings;
+	//a}
 
-	public void setMyRatings(HashMap<String,Rating> myRatings) {
-		this.myRatings = myRatings;
-	}
+	//public void setMyRatings(HashMap<String,Rating> myRatings) {		this.myRatings = myRatings;}
 
 	public EfficientRater(String id) {
         myID = id;
-        myRatings = new HashMap<String,Rating>();
+        //myRatings = new HashMap<String,Rating>();
+        myRatings = new ArrayList<Rating>();
     }
 
     public void addRating(String item, double rating) {
-        myRatings.put(item, new Rating(item,rating));
+        //myRatings.put(item, new Rating(item,rating));
+    	myRatings.add(new Rating(item,rating));
     }
 
-    public boolean hasRating(String item) {
-    	if (myRatings.containsKey(item)){
+    public boolean hasRating2(String item) {
+    	if (myRatings.contains(item)){
     		return true;
     	}
     	return false;
@@ -45,7 +45,15 @@ public class EfficientRater implements Rater{
         
         //return false;
     }
-
+    public boolean hasRating(String item) {
+        for(int k=0; k < myRatings.size(); k++){
+            if (myRatings.get(k).getItem().equals(item)){
+                return true;
+            }
+        }
+        
+        return false;
+    }
     public String getID() {
         return myID;
     }
@@ -72,6 +80,12 @@ public class EfficientRater implements Rater{
         
         return list;
     }
+
+	@Override
+	public ArrayList<Rating> getMyRatings() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 
 }
